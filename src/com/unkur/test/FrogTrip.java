@@ -55,7 +55,7 @@ public class FrogTrip {
 	 * @return false if frog would jump into the tree or out of array, else
 	 *         return true
 	 */
-	boolean correct(int x, int y) {
+	boolean border(int x, int y) {
 		if ((x == 14 & y == 9) | (x == 5 & y == 8))
 			return false;
 		if (y < 0 | y >= 10)
@@ -102,7 +102,7 @@ public class FrogTrip {
 				if (x >= 16)
 					x = x - 16;
 
-				if (correct(x, y)) {
+				if (border(x, y)) {
 
 					// area[x][y] is a location of possible frog jump
 					area[x][y] = area[current.x][current.y] + 1;
